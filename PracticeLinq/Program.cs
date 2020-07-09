@@ -26,7 +26,7 @@ namespace PracticeLinq
 
             string[] vidGames = { "Astroids", "PacMan", "Robotron", "Joust" };
 
-            var gameList = vidGames.Where(x => x.Length > 1).OrderByDescending(x => x.Length);
+            var gameList = vidGames.OrderByDescending(x => x.Length);
 
             foreach (var x in gameList)
             {
