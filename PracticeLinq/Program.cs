@@ -8,6 +8,8 @@ namespace PracticeLinq
     {
         static void Main(string[] args)
         {
+
+            //Query Style
             string[] cars = { "Sentra", "Mustang", "Dart","Prius" };
 
             var carList = from car in cars
@@ -16,6 +18,17 @@ namespace PracticeLinq
                           select car;
 
             foreach(var x in carList)
+            {
+                Console.WriteLine(x);
+            }
+
+            //Method Style
+
+            string[] vidGames = { "Astroids", "PacMan", "Robotron", "Joust" };
+
+            var gameList = vidGames.Where(x => x.Length > 1).OrderByDescending(x => x.Length);
+
+            foreach (var x in gameList)
             {
                 Console.WriteLine(x);
             }
